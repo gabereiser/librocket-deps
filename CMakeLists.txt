@@ -30,14 +30,13 @@ add_subdirectory(glm)
 add_subdirectory(json)
 add_subdirectory(freetype2)
 add_subdirectory(SDL)
-add_subdirectory(SDL_ttf)
 add_subdirectory(zlib)
 add_subdirectory(libzip)
 
 add_library(rocket-deps STATIC librocket-deps.cpp)
 
-#add_dependencies(librocket-deps zip zlib glm json freetype2 SDL2 SDL_ttf)
-target_link_libraries(rocket-deps zip zlib glm_static json freetype2 SDL2 SDL_ttf)
+#add_dependencies(librocket-deps zip zlib glm json freetype2 SDL2)
+target_link_libraries(rocket-deps zip zlib glm_static json freetype2 SDL2)
 
 add_library(rocket::deps ALIAS rocket-deps)
 
