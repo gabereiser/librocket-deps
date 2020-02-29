@@ -1,0 +1,21 @@
+[submodule "SDL"]
+	path = SDL
+	url = https://github.com/SDL-mirror/SDL.git
+[submodule "glm"]
+	path = glm
+	url = https://github.com/g-truc/glm.git
+[submodule "SDL_ttf"]
+	path = SDL_ttf
+	url = https://github.com/SDL-mirror/SDL_ttf.git
+[submodule "json"]
+	path = json
+	url = https://github.com/nlohmann/json.git
+[submodule "freetype2"]
+	path = freetype2
+	url = https://git.sv.nongnu.org/r/freetype/freetype2.git
+[submodule "zlib"]
+	path = zlib
+	url = https://github.com/madler/zlib.git
+[submodule "libzip"]
+	path = libzip
+	url = https://github.com/nih-at/libzip.git
