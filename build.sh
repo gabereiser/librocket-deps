@@ -6,7 +6,7 @@ echo -e "\x1b[32mRunning cmake.\n\x1b[0m"
 `cmake -D CMAKE_INSTALL_PREFIX=./install ..` > /dev/null 2>&1
 echo -e "\x1b[32mConfiguration complete.\nCompiling...\x1b[0m"
 `make -j4` > /dev/null 2>&1
-echo -e "\x1b[32mCompiling complete.\Gathering...\x1b[0m"
+echo -e "\x1b[32mCompiling complete.\nGathering...\x1b[0m"
 `make install` > /dev/null 2>&1
 cd install/lib
 rm -f librocket-deps.a
