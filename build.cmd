@@ -7,16 +7,15 @@ ECHO Dependency compilation starting...
 :: include = Headers for all included libs
 
 RMDIR /s /q target
-RMDIR /s /q lib
-RMDIR /s /q include
+RMDIR /s /q install
 
 MD target >NUL
-MD lib >NUL
-MD include\freetype >NUL
-MD include\libzip >NUL
-MD include\zlib >NUL
-MD include\glm >NUL
-MD include\json >NUL
+MD install\lib >NUL
+MD install\include\freetype >NUL
+MD install\include\libzip >NUL
+MD install\include\zlib >NUL
+MD install\include\glm >NUL
+MD install\include\json >NUL
 
 CD target
 
@@ -37,15 +36,15 @@ ECHO Gathering...
 
 CD ..
 
-XCOPY /S /Y /Q /H freetype2\include\* include\
-XCOPY /S /Y /Q /H target\freetype2\include\* include\
-XCOPY /S /Y /Q /H glm\glm\* include\glm\
-XCOPY /S /Y /Q /H SDL\include\* include\
-XCOPY /S /Y /Q /H target\SDL\include\* include\
-XCOPY /S /Y /Q /H json\single_include\nlohmann\* include\json\
-XCOPY /S /Y /Q /H libzip\lib\*.h include\libzip\
-XCOPY /S /Y /Q /H zlib\*.h include\zlib\
+XCOPY /S /Y /Q /H freetype2\include\* install\include\
+XCOPY /S /Y /Q /H target\freetype2\include\* install\include\
+XCOPY /S /Y /Q /H glm\glm\* install\include\glm\
+XCOPY /S /Y /Q /H SDL\include\* install\include\
+XCOPY /S /Y /Q /H target\SDL\include\* install\include\
+XCOPY /S /Y /Q /H json\single_include\nlohmann\* install\include\json\
+XCOPY /S /Y /Q /H libzip\lib\*.h install\include\libzip\
+XCOPY /S /Y /Q /H zlib\*.h install\include\zlib\
 
-XCOPY /S /Y /Q /H target\librocket-deps.lib lib\
+XCOPY /S /Y /Q /H target\librocket-deps.lib install\lib\
 
 ECHO Dependency compilation complete!
