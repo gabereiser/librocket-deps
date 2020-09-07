@@ -18,6 +18,8 @@ ENDIF(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
 set(CMAKE_FIND_ROOT_PATH ${CMAKE_SOURCE_DIR})
 set(SDL2_DIR "${CMAKE_SOURCE_DIR}/SDL")
 set(SDL_STATIC ON)
+set(ZLIB_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/zlib")
+set(ZLIB_LIBRARY "${CMAKE_BINARY_DIR}/zlib/Release/zlibstatic.lib")
 option(BUILD_STATIC "" ON)
 option(BUILD_SHARED_LIBS "" OFF)
 option(BUILD_EXAMPLES "" OFF)
@@ -26,19 +28,21 @@ option(JSON_BuildTests "" OFF)
 
 project(rocket-deps)
 
+add_subdirectory(zlib)
 add_subdirectory(glm)
 add_subdirectory(json)
 add_subdirectory(freetype2)
 add_subdirectory(SDL)
-add_subdirectory(zlib)
 add_subdirectory(libzip)
 
 add_library(rocket-deps STATIC librocket-deps.cpp)
 
-#add_dependencies(librocket-deps zip zlib glm json freetype2 SDL2)
-target_link_libraries(rocket-deps zip zlib glm_static json freetype2 SDL2)
-
 add_library(rocket::deps ALIAS rocket-deps)
+
+#add_dependencies(librocket-deps zip zlib glm json freetype2 SDL2)
+target_link_libraries(rocket-deps zip zlibstatic glm_static json freetype2 SDL2)
+
+
 
 include(GNUInstallDirs)
 

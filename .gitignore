@@ -31,10 +31,19 @@
 *.out
 *.app
 
+# Build Directories
+[Ii]nclude
+[Ll]ib
 [Tt]arget
 [Oo]ut
 [Bb]uild
+
+# IDE Directories
 .vscode/
 .clion/
 *.sln
 
+# Archives
+*.xz
+*.gz
+*.zip
