@@ -6,8 +6,8 @@ ECHO Dependency compilation starting...
 :: lib     = Post-combine lib dir
 :: include = Headers for all included libs
 
-RMDIR /s /q target
-RMDIR /s /q install
+RMDIR /s /q target >NUL
+RMDIR /s /q install >NUL
 
 MD target >NUL
 MD install\lib >NUL
