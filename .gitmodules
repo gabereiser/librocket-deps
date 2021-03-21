@@ -1,12 +1,6 @@
-[submodule "SDL"]
-	path = SDL
-	url = https://github.com/SDL-mirror/SDL.git
-[submodule "glm"]
-	path = glm
-	url = https://github.com/g-truc/glm.git
-[submodule "SDL_ttf"]
-	path = SDL_ttf
-	url = https://github.com/SDL-mirror/SDL_ttf.git
+[submodule "glfw"]
+    path = glfw
+	url = https://github.com/glfw/glfw.git
 [submodule "json"]
 	path = json
 	url = https://github.com/nlohmann/json.git
