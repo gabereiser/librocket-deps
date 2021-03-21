@@ -20,10 +20,9 @@ set(ZLIB_INCLUDE_DIR "${CMAKE_SOURCE_DIR}/zlib")
 set(ZLIB_LIBRARY "${CMAKE_BINARY_DIR}/zlib/Release/zlibstatic.lib")
 option(BUILD_STATIC "" ON)
 option(BUILD_SHARED_LIBS "" OFF)
-option(BUILD_EXAMPLES "" OFF)
-option(BUILD_TOOLS "" OFF)
 option(JSON_BuildTests "" OFF)
-
+option(GLFW_BUILD_EXAMPLES "" OFF)
+option(GLFW_BUILD_DOCS "" OFF)
 project(rocket-deps)
 
 add_subdirectory(glfw)
