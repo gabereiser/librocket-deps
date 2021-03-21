@@ -1,5 +1,5 @@
 [submodule "glfw"]
-    path = glfw
+	path = glfw
 	url = https://github.com/glfw/glfw.git
 [submodule "json"]
 	path = json
