@@ -14,7 +14,7 @@ MD install\lib >NUL
 MD install\include\freetype >NUL
 MD install\include\libzip >NUL
 MD install\include\zlib >NUL
-MD install\include\glm >NUL
+MD install\include\glfw >NUL
 MD install\include\json >NUL
 
 CD target
@@ -38,9 +38,7 @@ CD ..
 
 XCOPY /S /Y /Q /H freetype2\include\* install\include\
 XCOPY /S /Y /Q /H target\freetype2\include\* install\include\
-XCOPY /S /Y /Q /H glm\glm\* install\include\glm\
-XCOPY /S /Y /Q /H SDL\include\* install\include\
-XCOPY /S /Y /Q /H target\SDL\include\* install\include\
+XCOPY /S /Y /Q /H glfw\include\* install\include\glfw\
 XCOPY /S /Y /Q /H json\single_include\nlohmann\* install\include\json\
 XCOPY /S /Y /Q /H libzip\lib\*.h install\include\libzip\
 XCOPY /S /Y /Q /H zlib\*.h install\include\zlib\
