@@ -1,7 +1,7 @@
 #!/bin/sh
 
 
-archs=(x86_64)
+archs=(`uname -m`)
 libraries=(*.a)
 libtool="/usr/bin/libtool"
 
